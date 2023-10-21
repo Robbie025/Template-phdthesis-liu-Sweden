@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis Typographic Thesis
+% LaTeX Template
+% Version 1.3 (15/2/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% André Miede (http://www.miede.de)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% General Tips:
+% 1) Make sure to edit the classicthesis-config.file
+% 2) New enumera tion (A., B., C., etc in small caps): \begin{aenumerate} \end{aenumerate}
+% 3) For margin notes: \marginpar or \graffito{}
+% 4) Do not use bold fonts in this style, it is designed around them
+% 5) Use tables as in the examples
+% 6) See classicthesis-preamble.sty for useful commands
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[
+		twoside,titlepage,numbers=noenddot,headinclude,%1headlines, titlepage openleft
+                footinclude=true,cleardoublepage=empty,
+                fontsize=9pt, %paper=a4,  BCOR=5mm,% Binding correction, paper type and font size BCOR=5mm,
+                ngerman,american, % Languages
+                ]{scrreprt} 
+ 
+                
+% Includes the file which contains all the document configurations and packages - make sure to edit this file
+\input{classicthesis-config}
+ 
+
+
+%\setlength{\parindent}{0em}  
+\setlength{\parskip}{0.5em}
+
+
+
+% Include only few chapters in your pdf.
+%\includeonly{Chapters/01_introduction}	
+
+
+ 
+
+\begin{document}
+
+\frenchspacing % Reduces space after periods to make text more compact
+
+\raggedbottom % Makes all pages the height of the text on that page
+
+\selectlanguage{american} % Select your default language - e.g. american or ngerman
+
+%\renewcommand*{\bibname}{new name} % Uncomment to change the name of the bibliography
+%\setbibpreamble{} % Uncomment to include a preamble to the bibliography - some text before the reference list starts
+
+\pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
+%gobble to remove page numbering
+\pagestyle{plain} % Suppress headers for the pre-content pages
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRE-CONTENT THESIS PAGES
+%----------------------------------------------------------------------------------------
+\cleardoublepage\include{FrontBackMatter/Titlepage} % Main title page
+                \include{FrontBackMatter/Titleback} % Back of the title page
+
+\cleardoublepage\include{FrontBackMatter/Dedication} % Dedication page
+%\cleardoublepage\include{FrontBackMatter/Foreword} % Uncomment and create a Foreword.tex to include a foreword
+
+\sloppy % to make sure words dont run out to the correct margin limits
+
+\cleardoublepage\include{FrontBackMatter/Abstract} % Abstract page
+\cleardoublepage\include{FrontBackMatter/Acknowledgments} % Acknowledgements page
+\cleardoublepage\include{FrontBackMatter/Publication} % Publications from the thesis page
+
+
+\pagestyle{scrheadings} % Show chapter titles as headings
+\cleardoublepage\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+
+
+\pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
+%\setcounter{page}{90} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
+
+%\cleardoublepage % Avoids problems with pdfbookmark
+
+
+ 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+%\ctparttext{This part of the thesis will introduce the reader to \emph{Human-Robot Collaboration} and its application to \emph{Assemby Operation}. These ideas will be used to motivate the use of  large industrial robots for assembly operations and will form the basis for the research questions that will be detailed. A summary and a map of the five peer reviewed articles that is the key to answering the research questions will also be provided.} % Text on the Part 1 page describing  the content in Part 1
+%\part{Introduction \& Background} % First part of the thesis
+
+
+
+ 
+\cleardoublepage\include{Chapters/01_introduction} % Chapter 1 Introduction
+\cleardoublepage\include{Chapters/02_method} % Chapter 2 Method
+\cleardoublepage\include{Chapters/03_theory} % Chapter 3 Theory
+\cleardoublepage\include{Chapters/04_Result} % Chapter 4 Result
+\cleardoublepage\include{Chapters/05_Discussion} % Chapter 5 Discussion
+\cleardoublepage\include{Chapters/06_Conclusion} % Chapter 6 Conclusion
+
+
+
+\iffalse
+
+====
+DONE
+
+Title Page - V1 2023-10-15
+Back Page - V1 2023-10-15
+Dedication - V1 2023-10-15
+Abstract - What is an abstract? - V1 2023-10-15
+Acknowledgement - V1 2023-10-15
+Appended Articles - V1 2023-10-15
+
+
+2023-10-17 - in the TOC the list of figures, definitions etc. is very big typeface. Not good. Can comment it off.
+TOC  
+Definitions 
+Acronyms
+List of figures
+List of tables
+
+Configuration file cleanup
+style file clean up
+
+
+
+
+Chapters - 1
+Introduction  
+ References
+ figures, tables, headings 
+
+Chapter - 2
+Methodology
+
+
+
+Chapter - 3 theory
+  
+Chapter - 4 - result 
+
+Chapter 5 - Discussion
+====
+
+Chapter 6 - Conclusion
+
+
+References.
+
+Spikblad 
+
+The page between the main article and the appended articles
+
+Appended article template. this is for the articles orginally published and that will be included in the thesis.
+
+
+
+-- double check this works in both ubuntu and windows. How? virtual machies x2 
+-- Fresh install for both windows and Ubuntu and scientificLinux
+
+Clean Pdf, tex files, Folder
+
+
+* See others
+\fi
+
+
+
+
+%\afterpage{\null\newpage} % used to move one page
+ 
+
+
+%----------------------------------------------------------------------------------------
+%	POST-CONTENT THESIS PAGES
+%----------------------------------------------------------------------------------------
+\cleardoublepage\include{FrontBackMatter/Bibliography} % Bibliography
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+\cleardoublepage
+
+
+
+
+\end{document}

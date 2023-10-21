@@ -1,0 +1,34 @@
+% Bibliography
+
+\label{app:bibliography} % Reference the bibliography elsewhere with \autoref{app:bibliography}
+\renewcommand\bibname{References}
+\manualmark
+\markboth{\spacedlowsmallcaps{\bibname}}{\spacedlowsmallcaps{\bibname}} 
+\refstepcounter{dummy}
+ 
+\addtocontents{toc}{\protect\vspace{\beforebibskip}} % Place the bibliography slightly below the rest of the document content in the table of contents
+\addcontentsline{toc}{chapter}{\tocEntry{\bibname}}
+
+
+
+
+\bibliographystyle{unsrt}
+
+%\bibliography{C:/Users/vargo61/Dropbox/Papers/Literature_LatexBIB/varunbib_2018} 
+\bibliography{phdthesis} 
+
+
+ 
+ 
+% To add appended articles to your thesis pdf file. 
+
+\pagenumbering{gobble}
+\phantomsection
+%\addcontentsline{toc}{chapter}{} %\Rmnum{1} -- \Rmnum{9}
+%\phantomsection
+\addcontentsline{toc}{chapter}{Appended Articles} %\Rmnum{1} -- \Rmnum{9}
+\addcontentsline{toc}{section}{Paper \Rmnum{1}\dots\dots 101 -- 110}
+\addcontentsline{toc}{section}{Paper \Rmnum{2}\dots\;\;\;201 -- 210}
+
+
+

@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+ 
+\documentclass[%fontsize=9pt%,twoside , BCOR=5mm% Extra spacing for the header and footer
+]{book}  
+\usepackage[paperwidth=148mm, paperheight=210mm,margin=10mm]{geometry}
+%\usepackage[a4,frame,center]{crop} % for the page borders. remove this when ready to print
+
+ 
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+%\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps original
+\allsectionsfont{ \large\normalfont\scshape} % Make all sections centered, the default font and small caps chaned by vaurn
+
+ 
+% specify Paper
+%\newcommand{\Paperroman}[1]{\textsc{Paper} \Rmnum{1}} %
+
+ 
+%\usepackage{fancyhdr} % Custom headers and footers
+%\fancyhf{}
+%\pagestyle{fancy} % Makes all pages in the document conform to the custom headers and footers
+%\fancyhead[C]{} % No page header - if you want one, create it in the same way as the footers below
+%\fancyhead[L]{\textit{Paper \Rmnum{5}} -- Demonstrator Based Research -- A Methodology}  % Empty center footer
+%\fancyhead[R]{} % Page numbering for right header
+%\fancyhead[RO,LE]{\large\textsc{Paper-\Rmnum{1}}}
+%\fancyhead[LE]{\small\textit{Demonstrators to Support Research in Industrial Safety: A Methodology}}
+% % Understanding Situational & Mode Awareness for Safe Human-Robot Collaboration: Case Studies on Assembly Applications
+%
+%\fancyfoot[L]{} % Empty left footer
+%\fancyfoot[C]{\thepage} % Empty center footer
+%\fancyfoot[R]{} % Page numbering for right footer
+%\renewcommand{\headrulewidth}{1pt} % Remove header underlines
+%\renewcommand{\footrulewidth}{1.5pt} % Remove footer underlines with 0pt
+%\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+%\numberwit	hin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+
+%----------------------------------------------------------------------------------------
+%Added by Varun 		
+%\setlength{\parskip}{\baselineskip}% addede by varun 20181119 to increase the space betwen paragraph
+%\setlength{\parindent}{0pt}
+
+ %\usepackage[colorlinks]{hyperref}%  hyperlinks [must be loaded after dropping]
+%\usepackage[none]{hyphenat} % removes all hypernation in the document
+\usepackage{paralist}
+%\usepackage{setspace}
+
+
+%----------------------------------------------------------------------------------------
+
+
+%% added by varun 2018-11-19
+ \usepackage{xcolor} % Required for colour specification
+  \definecolor{Brown}{rgb}{0.59, 0.29, 0.00}  
+    \definecolor{Sienna}{rgb}{0.53, 0.18, 0.09} 
+ \definecolor{halfgray}{gray}{0.55}
+% \usepackage{tikz}
+ \definecolor{kukaorgance}{RGB}{255, 204, 153}
+  \definecolor{orange}{rgb}{1,0.5,0}
+
+\setcounter{tocdepth}{1} % Set the depth of the table of contents to show sections and subsections only
+
+\usepackage{paralist} 
+%\usepackage[shortlabels]{enumitem}
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{anyfontsize}
+%\usepackage[utf8]{inputenc} % Required for inputting international characters
+%\usepackage[T1]{fontenc} % Output font encoding for international characters
+%\usepackage{PTSerif} % Use the Paratype Serif font
+
+% ADDED by varun for the roman numbers
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+% ENDED by varun for the roman numbers
+
+\usepackage[framemethod=TikZ]{mdframed}% Required for creating boxes
+\mdfdefinestyle{sidebar}{
+    linecolor=none, % Outer line color
+    outerlinewidth=0.5pt, % Outer line width
+    roundcorner=5pt, % Amount of corner rounding
+    innertopmargin=10pt, % Top margin
+    innerbottommargin=10pt, % Bottom margin
+    innerrightmargin=10pt, % Right margin
+    innerleftmargin=10pt, % Left margin
+    backgroundcolor=white, % Box background color
+    frametitlebackgroundcolor=white, % Title background color
+    frametitlerule=false, % Title rule - true or false
+    frametitlerulecolor=white, % Title rule color
+    frametitlerulewidth=0.5pt, % Title rule width
+    frametitlefont=\large, % Title heading font specification
+    font=\small
+}
+
+  \usepackage{booktabs} % for nicer tables
+\usepackage[numbers,square]{natbib}
+%\usepackage[round]{natbib}
+%bibliographystyle{unsrt}
+%\bibpunct{ (}{)}{;}{a}{,}{,}
+
+
+
+\input{configuration}
+
+
+\begin{document}
+
+ 
+\input{one}
+\input{two}
+
+ 
+ 
+
+\end{document}
