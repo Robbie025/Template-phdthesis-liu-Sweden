@@ -1,6 +1,7 @@
-License:
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+Description:
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+This is a template for writing a PhD thesis at Linköping Univesity or any other university in Sweden. The styling is derived heavily from classicthesis, which is simple and easily readable. I have made some changes to the original style includeing page size, colours, margin etc. The orginal is much more comprehensive and I can recommend the reader to have a look at it.
 
-You should have received a copy of the GNU General Public License along with this program; see the file COPYING. If not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+Page size: S5
+
+Additionally, I have also added a template for spikblad as well as template for the appended articles. Not everything is automated. The user needs to compile the PhD thesis, spikblad and the appended articles separately.
